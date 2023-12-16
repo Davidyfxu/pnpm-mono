@@ -1,0 +1,42 @@
+{
+  "name": "qk_app2",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.7.13",
+    "@types/react": "17.0.2",
+    "@types/react-dom": "17.0.2",
+    "qiankun": "^2.8.4",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-scripts": "5.0.1",
+    "typescript": "^4.4.2",
+    "web-vitals": "^2.1.0",
+    "@rescripts/cli": "^0.0.16"
+  },
+  "scripts": {
+    "start": "rescripts start",
+    "build": "rescripts build",
+    "test": "rescripts test",
+    "eject": "rescripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

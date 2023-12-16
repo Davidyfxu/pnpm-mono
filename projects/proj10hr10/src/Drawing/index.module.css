@@ -1,0 +1,27 @@
+.body {
+  font-family: sans-serif;
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.canvas {
+  border: 1px solid lightcyan;
+  border-radius: 0.25rem;
+}
+.toolbox {
+  background-color: lightcyan;
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+.slider {
+  width: 200px;
+}
+.color {
+  max-width: 200px;
+}

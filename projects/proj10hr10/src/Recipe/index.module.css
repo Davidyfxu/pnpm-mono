@@ -1,0 +1,92 @@
+.body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #c9d6ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff);
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.mobileContainer {
+  width: 400px;
+  background-color: #fff;
+  box-shadow: 0 0 10px #3333331a;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.favContainer {
+  background-color: rgb(233, 199, 255);
+  padding: 0.25rem 1rem;
+  text-align: center;
+}
+.favMeals {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+  gap: 5px;
+}
+
+.popupContainer {
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.mealHeader {
+  position: relative;
+  cursor: pointer;
+}
+.meal {
+  border-radius: 3px;
+  margin: 1.5rem;
+  box-shadow: 0 0 10px 2px #3333331a;
+}
+img {
+  max-width: 100%;
+}
+.mealBody {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.popup {
+  background-color: #fff;
+  border-radius: 5px;
+  max-width: 800px;
+  max-height: 100vh;
+  width: 100%;
+  overflow: auto;
+}
+.popupAvatar {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.hover {
+  background-color: var(--semi-color-overlay-bg);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: whitesmoke;
+}

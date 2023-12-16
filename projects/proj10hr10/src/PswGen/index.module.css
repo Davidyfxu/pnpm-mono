@@ -1,0 +1,64 @@
+.body {
+  box-sizing: border-box;
+  background-color: rebeccapurple;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+.pwContainer {
+  background-color: rgb(46, 12, 80);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  min-width: 400px;
+  max-width: 800px;
+}
+.pwHeader {
+  padding: 1rem;
+}
+.pw {
+  background-color: rgb(69, 28, 109);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 1.5rem;
+  align-items: center;
+  height: 70px;
+  padding: 1rem;
+  overflow: auto;
+  word-wrap: break-word;
+}
+
+.pwBody {
+  padding: 0 1rem 1rem;
+}
+.pwText {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.pwControl {
+  margin: 10px 0;
+  display: flex;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.generate {
+  background-color: #ecb602;
+  border: none;
+  color: rebeccapurple;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+.generate:hover {
+  opacity: 0.8;
+}

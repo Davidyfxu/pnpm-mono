@@ -1,0 +1,17 @@
+.btnList {
+  position: fixed;
+  bottom: 58px;
+  left: 20px;
+  right: 20px;
+  height: 58px;
+  background-color: black;
+  border-radius: 18px;
+  display: flex;
+  justify-self: center;
+  .btn {
+    color: white;
+    flex: 1;
+    height: 58px;
+    line-height: 58px;
+  }
+}
