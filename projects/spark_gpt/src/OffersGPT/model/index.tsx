@@ -3,7 +3,8 @@ import { ModelReq } from "../types";
 const APPID = "e9e6f1fb";
 const API_SECRET = "ZmY4ZDZhOTYyZGE0MGIxYTQzM2E2MTlj";
 const API_KEY = "6a3df7af42e13f352f02425bfc7a1b88";
-
+const VERSION = "v3.1";
+const DOMAIN = "generalv3";
 let total_res = "";
 function getWebsocketUrl(): Promise<string> {
   return new Promise((resolve) => {
@@ -13,12 +14,12 @@ function getWebsocketUrl(): Promise<string> {
     const date = new Date().toGMTString();
     const algorithm = "hmac-sha256";
     const headers = "host date request-line";
-    const signatureOrigin = `host: ${host}\ndate: ${date}\nGET /v1.1/chat HTTP/1.1`;
+    const signatureOrigin = `host: ${host}\ndate: ${date}\nGET /${VERSION}/chat HTTP/1.1`;
     const signatureSha = CryptoJS.HmacSHA256(signatureOrigin, apiSecret);
     const signature = CryptoJS.enc.Base64.stringify(signatureSha);
     const authorizationOrigin = `api_key="${apiKey}", algorithm="${algorithm}", headers="${headers}", signature="${signature}"`;
     const authorization = btoa(authorizationOrigin);
-    const url = `wss://spark-api.xf-yun.com/v1.1/chat?authorization=${authorization}&date=${date}&host=${host}`;
+    const url = `wss://spark-api.xf-yun.com/${VERSION}/chat?authorization=${authorization}&date=${date}&host=${host}`;
     resolve(url);
   });
 }
@@ -59,8 +60,7 @@ class TTSRecorder {
       },
       parameter: {
         chat: {
-          domain: "general",
-          // domain: "generalv2",
+          domain: DOMAIN,
           temperature: 0.5,
           max_tokens: 1024,
         },
