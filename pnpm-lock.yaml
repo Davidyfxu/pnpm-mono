@@ -220,67 +220,6 @@ importers:
         specifier: ^2.0.15
         version: 2.0.22
 
-  projects/john_next_tutorial:
-    dependencies:
-      next:
-        specifier: 14.1.0
-        version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
-      react:
-        specifier: ^18
-        version: 18.2.0
-      react-dom:
-        specifier: ^18
-        version: 18.2.0(react@18.2.0)
-    devDependencies:
-      '@prisma/client':
-        specifier: ^5.9.1
-        version: 5.9.1(prisma@5.9.1)
-      '@tailwindcss/typography':
-        specifier: ^0.5.10
-        version: 0.5.10(tailwindcss@3.3.6)
-      '@types/node':
-        specifier: ^20
-        version: 20.10.4
-      '@types/react':
-        specifier: ^18
-        version: 18.2.19
-      '@types/react-dom':
-        specifier: ^18
-        version: 18.2.7
-      autoprefixer:
-        specifier: ^10.0.1
-        version: 10.4.16(postcss@8.4.32)
-      daisyui:
-        specifier: ^4.7.2
-        version: 4.7.2(postcss@8.4.32)
-      eslint:
-        specifier: ^8
-        version: 8.56.0
-      eslint-config-next:
-        specifier: 14.1.0
-        version: 14.1.0(eslint@8.56.0)(typescript@5.3.3)
-      postcss:
-        specifier: ^8
-        version: 8.4.32
-      prettier:
-        specifier: ^3.2.5
-        version: 3.2.5
-      prisma:
-        specifier: ^5.9.1
-        version: 5.9.1
-      react-hot-toast:
-        specifier: ^2.4.1
-        version: 2.4.1(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)
-      tailwindcss:
-        specifier: ^3.3.0
-        version: 3.3.6
-      typescript:
-        specifier: ^5
-        version: 5.3.3
-      zod:
-        specifier: ^3.22.4
-        version: 3.22.4
-
   projects/mosh_next:
     dependencies:
       '@next-auth/prisma-adapter':
@@ -444,6 +383,67 @@ importers:
       vite:
         specifier: ^4.4.9
         version: 4.5.1(@types/node@20.10.4)
+
+  projects/next_tutorial:
+    dependencies:
+      next:
+        specifier: 14.1.0
+        version: 14.1.0(react-dom@18.2.0)(react@18.2.0)
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@prisma/client':
+        specifier: ^5.9.1
+        version: 5.9.1(prisma@5.9.1)
+      '@tailwindcss/typography':
+        specifier: ^0.5.10
+        version: 0.5.10(tailwindcss@3.3.6)
+      '@types/node':
+        specifier: ^20
+        version: 20.10.4
+      '@types/react':
+        specifier: ^18
+        version: 18.2.19
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.7
+      autoprefixer:
+        specifier: ^10.0.1
+        version: 10.4.16(postcss@8.4.32)
+      daisyui:
+        specifier: ^4.7.2
+        version: 4.7.2(postcss@8.4.32)
+      eslint:
+        specifier: ^8
+        version: 8.56.0
+      eslint-config-next:
+        specifier: 14.1.0
+        version: 14.1.0(eslint@8.56.0)(typescript@5.3.3)
+      postcss:
+        specifier: ^8
+        version: 8.4.32
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      prisma:
+        specifier: ^5.9.1
+        version: 5.9.1
+      react-hot-toast:
+        specifier: ^2.4.1
+        version: 2.4.1(csstype@3.1.3)(react-dom@18.2.0)(react@18.2.0)
+      tailwindcss:
+        specifier: ^3.3.0
+        version: 3.3.6
+      typescript:
+        specifier: ^5
+        version: 5.3.3
+      zod:
+        specifier: ^3.22.4
+        version: 3.22.4
 
   projects/proj10hr10:
     dependencies:
@@ -7179,7 +7179,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.23.6
       '@testing-library/dom': 8.20.1
-      '@types/react-dom': 18.2.7
+      '@types/react-dom': 18.2.18
       react: 17.0.2
       react-dom: 17.0.2(react@17.0.2)
     dev: false
