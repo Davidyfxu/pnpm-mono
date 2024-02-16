@@ -74,4 +74,5 @@ common/autoinstallers/*/.npmrc
 
 apps/*/.idea
 apps/*/dist
+apps/*/.next
 
