@@ -12,11 +12,7 @@ export const metadata: Metadata = {
     "GPTGenius: Your AI language companion. Powered by OpenAI, it enhances your conversations, content creation, and more!",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: JSX.Element }) {
   return (
     <ClerkProvider>
       <html lang="en" data-theme={"light"}>

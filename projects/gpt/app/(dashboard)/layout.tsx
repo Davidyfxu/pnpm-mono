@@ -13,6 +13,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
         >
           <FaBarsStaggered className="w-8 h-8 text-primary" />
         </label>
+        {/*@ts-ignore*/}
         <div className="bg-base-200 px-8 py-12 min-h-screen">{children}</div>
       </div>
       <div className="drawer-side">
