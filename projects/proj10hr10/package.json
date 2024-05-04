@@ -18,8 +18,8 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.3.0",
     "react-sketch-canvas": "^6.2.0",
-    "lodash": "latest",
-    "date-fns": "latest",
+    "lodash": "^4.17.21",
+    "date-fns": "^2.30.0",
     "prettier": "^2.7.1"
   },
   "devDependencies": {
