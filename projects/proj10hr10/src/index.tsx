@@ -14,7 +14,6 @@ import GithubProfiles from "./GithubProfiles";
 import Home from "./Home";
 
 const App = () => {
-  console.log("hello");
   return (
     <BrowserRouter>
       <Routes>

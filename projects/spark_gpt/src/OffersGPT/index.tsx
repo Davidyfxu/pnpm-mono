@@ -43,7 +43,6 @@ const OffersGPT = () => {
           type="text"
           value={value}
           onKeyDown={(v) => {
-            console.log(v?.key === "Enter", v.target?.value);
             v?.key === "Enter" && onSearch(v.target?.value);
           }}
           onChange={(v) => setValue(v.target.value)}
