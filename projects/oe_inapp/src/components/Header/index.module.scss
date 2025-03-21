@@ -1,0 +1,103 @@
+.customBox {
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  padding: 4rem 2rem;
+  background-color: #fafafa;
+  position: relative;
+  overflow: hidden;
+
+  @media (max-width: 960px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+}
+
+.boxText {
+  flex: 1;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  z-index: 1;
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #111;
+    margin: 0;
+    
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+
+  div {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #444;
+    margin: 1.5rem 0;
+  }
+
+  @media (max-width: 899.95px) {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.typographyH2 {
+  font-weight: 700 !important;
+  color: #fff;
+}
+
+.typographyP {
+  padding-top: 1.5rem; /* 替换为 theme.spacing(3) 的实际值 */
+  padding-bottom: 1.5rem; /* 替换为 theme.spacing(3) 的实际值 */
+  line-height: 1.6;
+  color: #fff;
+}
+
+.buttons_container {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+
+  button {
+    padding: 0.75rem 2rem;
+    font-size: 1.125rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  @media (max-width: 960px) {
+    justify-content: center;
+  }
+}
+
+.imgBox {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  }
+
+  @media (max-width: 960px) {
+    max-width: 100%;
+  }
+}
