@@ -1,0 +1,8 @@
+.tree {
+  :global(.ant-tree-treenode) {
+    width: 100% !important;
+  }
+  :global(.ant-tree-node-content-wrapper) {
+    flex: 1;
+  }
+}
