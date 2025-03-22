@@ -1,0 +1,152 @@
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["omitApi"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Articles {
+  id        Int       @id @default(autoincrement())
+  title     String
+  content   String?   @db.Text
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  deletedAt DateTime?
+}
+
+model Categories {
+  id        Int       @id @default(autoincrement())
+  name      String
+  rank      Int       @default(1)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  courses   Courses[]
+}
+
+model Courses {
+  id            Int        @id @default(autoincrement())
+  categoryId    Int
+  category      Categories @relation(fields: [categoryId], references: [id])
+  userId        Int
+  user          Users      @relation(fields: [userId], references: [id])
+  name          String
+  image         String?
+  recommended   Boolean    @default(false)
+  introductory  Boolean    @default(false)
+  content       String?    @db.Text
+  likesCount    Int        @default(0)
+  chaptersCount Int        @default(0)
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  chapters      Chapters[]
+  likes         Likes[]
+
+  @@index([categoryId])
+  @@index([userId])
+  @@index([recommended])
+  @@index([introductory])
+}
+
+model Chapters {
+  id        Int      @id @default(autoincrement())
+  courseId  Int
+  course    Courses  @relation(fields: [courseId], references: [id])
+  title     String
+  content   String?  @db.Text
+  video     String?
+  rank      Int      @default(1)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([courseId])
+}
+
+model Users {
+  id        Int       @id @default(autoincrement())
+  email     String    @unique
+  username  String    @unique
+  nickname  String
+  password  String
+  avatar    String?
+  sex       Gender    @default(UNKNOWN)
+  company   String?
+  introduce String?
+  role      Role      @default(NORMAL)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  likes     Likes[]
+  courses   Courses[]
+  Orders    Orders[]
+
+  @@index([email])
+  @@index([username])
+  @@index([role])
+}
+
+enum Gender {
+  MALE
+  FEMALE
+  UNKNOWN
+}
+
+enum Role {
+  NORMAL
+  ADMIN
+}
+
+model Likes {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  user      Users    @relation(fields: [userId], references: [id])
+  courseId  Int
+  course    Courses  @relation(fields: [courseId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@index([userId])
+  @@index([courseId])
+}
+
+model Settings {
+  id        Int      @id @default(autoincrement())
+  name      String
+  icp       String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Logs {
+  id        Int      @id @default(autoincrement())
+  level     String
+  message   String
+  meta      String
+  timestamp DateTime @default(now())
+}
+
+model Orders {
+  id            Int           @id @default(autoincrement())
+  outTradeNo    String
+  tradeNo       String
+  userId        Int
+  user          Users         @relation(fields: [userId], references: [id])
+  subject       String
+  totalAmount   Float
+  paymentMethod PaymentMethod
+  paymentStatus PaymentStatus
+  createdAt     DateTime      @default(now())
+  updatedAt     DateTime      @updatedAt
+}
+
+enum PaymentMethod {
+  ALIPAY
+  WECHATPAY
+}
+
+enum PaymentStatus {
+  UNPAID
+  PAID
+  CANCEL
+}
